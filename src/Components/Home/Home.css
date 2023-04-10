@@ -1,0 +1,14 @@
+.header-text{
+    background: linear-gradient(to right, #7E90FE,
+                    #9873FF);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+}
+.banner-button{
+    background-image: linear-gradient(to left, #7E90FE, #9873FF);
+    padding: 10px; 
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    
+}

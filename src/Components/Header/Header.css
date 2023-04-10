@@ -5,3 +5,10 @@
     font-weight: bold;
     color: white;
 }
+.active{
+    background: linear-gradient(to right, #7E90FE,
+    #9873FF);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+font-weight: bold; 
+}
