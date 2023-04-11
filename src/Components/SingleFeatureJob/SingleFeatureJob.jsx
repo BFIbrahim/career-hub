@@ -1,0 +1,22 @@
+import React from 'react';
+import './SingleFeatureJob.css'
+
+const SingleFeatureJob = ({feturedJob}) => {
+console.log(feturedJob);
+    return (
+        <div>
+            <div className='text-start mb-14 text-gray-600'>
+                <img src={feturedJob.companyLogo} alt="" />
+                <h1 className='mt-2 font-bold text-gray-600'>{feturedJob.jobTitle}</h1>
+                <h5>{feturedJob.companyName}</h5>
+                <button className='feature-btn mt-3 mb-3'>{feturedJob.remoteOrOnsite}</button>
+                <button className='feature-btn ml-2 mt-3 mb-3'>{feturedJob.fulltimeOrParttime}</button><br />
+                <span>{feturedJob.location}</span>
+                <span className='ml-5'>Salary: {feturedJob.salary}</span><br />
+                <button className='deyails-btn'>View Details</button>
+            </div>
+        </div>
+    );
+};
+
+export default SingleFeatureJob;

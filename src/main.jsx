@@ -18,7 +18,8 @@ const route = createBrowserRouter([
     children: [
       {
         path:'/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader:(() => fetch('Job-category.json'))
       },
       {
         path: 'statistics',
@@ -38,7 +39,5 @@ const route = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <RouterProvider router={route}></RouterProvider>
-  </React.StrictMode>,
 )

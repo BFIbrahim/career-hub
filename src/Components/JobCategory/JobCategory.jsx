@@ -1,41 +1,28 @@
 import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import SingleJob from '../SingleJob/SingleJob';
 
 const JobCategory = () => {
 
-
-        const [jobData, setJobData] = useState([])
-
-        useEffect(() =>{
-            fetch('Job-category.json')
-            .then(res => res.json())
-            .then(data => setJobData(data))
-        }, [])
-
-        const allJobData = jobData;
-        console.log(allJobData);
-
-
-
+    const jobs = useLoaderData()
 
     return (
-        <div>
-            <div>
-                <img src="" alt="" />
-                
+        <div className=' mt-20'>
+            <div className='mb-10 text-gray-800'>
+                <h1 className='text-3xl font-bold'>BFC Job Category</h1>
+                <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
 
-            <div>
-
-            </div>
-
-            <div>
-
-            </div>
-
-            <div>
-
+            <div className='md:flex justify-around'>
+                {
+                    jobs.map(job => <SingleJob
+                        key={job.id}
+                        job={job}
+                    ></SingleJob>)
+                }
             </div>
         </div>
+
     );
 };
 
