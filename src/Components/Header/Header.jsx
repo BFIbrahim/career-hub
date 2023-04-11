@@ -8,14 +8,14 @@ const Header = () => {
     return (
         <div className='bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
             <div className='relative flex items-center justify-between'>
-                {/* Logo Section */}
+                {/* Company name */}
                 <Link to='/' className='inline-flex items-center'>
                     <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
                         Big Future Career
                     </span>
                 </Link>
 
-                {/* Nav Items Section */}
+                {/* Nav content */}
                 <ul className='items-center hidden space-x-8 lg:flex'>
                     <li>
                         <NavLink
@@ -48,7 +48,7 @@ const Header = () => {
                 </div>
 
 
-        {/* Small device navigation */}
+        {/* Responsive Nav */}
                 <div className='lg:hidden'>
                     <button
                         aria-label='Open Menu'
@@ -60,7 +60,7 @@ const Header = () => {
                     {isMenuOpen && (
                         <div className='absolute top-0 left-0 w-full z-10'>
                             <div className='p-5 bg-white border rounded shadow-sm'>
-                                {/* Logo & Button section */}
+                                
                                 <div className='flex items-center justify-between mb-4'>
                                     <div>
                                         <Link to='/' className='inline-flex items-center'>

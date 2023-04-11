@@ -1,0 +1,7 @@
+.error{
+    background-image: linear-gradient(to left, #7E90FE, #9873FF);
+    padding: 10px; 
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}

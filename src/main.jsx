@@ -7,12 +7,14 @@ import Home from './Components/Home/Home'
 import Statistics from './Components/Statistics/Statistics'
 import Applied from './Components/Applied Jobs/Applied'
 import Blog from './Components/Blog/Blog'
+import Error from './Components/error/Error'
 
 
 const route = createBrowserRouter([
   {
     path: '/',
     element: <App></App>,
+    errorElement:<Error></Error>,
     children: [
       {
         path:'/',
