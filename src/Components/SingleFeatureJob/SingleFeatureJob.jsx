@@ -1,8 +1,13 @@
 import React from 'react';
 import './SingleFeatureJob.css'
+import { Link } from 'react-router-dom';
 
 const SingleFeatureJob = ({feturedJob}) => {
-console.log(feturedJob);
+// console.log(feturedJob);
+
+const detailsClick = () => {
+    console.log(feturedJob);
+}
     return (
         <div>
             <div className='text-start mb-14 text-gray-600'>
@@ -13,7 +18,7 @@ console.log(feturedJob);
                 <button className='feature-btn ml-2 mt-3 mb-3'>{feturedJob.fulltimeOrParttime}</button><br />
                 <span>{feturedJob.location}</span>
                 <span className='ml-5'>Salary: {feturedJob.salary}</span><br />
-                <button className='deyails-btn'>View Details</button>
+                <Link to='/details'><button onClick={detailsClick} className='deyails-btn'>View Details</button></Link>
             </div>
         </div>
     );
