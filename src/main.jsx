@@ -20,7 +20,7 @@ const route = createBrowserRouter([
       {
         path:'/',
         element: <Home></Home>,
-        loader:(() => fetch('Job-category.json'))
+        loader: () => fetch('/FeaturedJob.json')
       },
       {
         path: 'statistics',
@@ -36,8 +36,14 @@ const route = createBrowserRouter([
 
       },
       {
-        path:'/details',
-        element:<JobDetails></JobDetails>
+        path:'/details/:id',
+        element:<JobDetails></JobDetails>,
+        loader: async({params}) => {
+          const res  = await fetch('/FeaturedJob.json')
+          const data = await res.json()
+          const detail = data.find(fdetail => fdetail.id == params.id) 
+          return detail
+        }
       }
     ]
   }

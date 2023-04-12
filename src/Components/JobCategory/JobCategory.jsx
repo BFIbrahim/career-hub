@@ -4,7 +4,13 @@ import SingleJob from '../SingleJob/SingleJob';
 
 const JobCategory = () => {
 
-    const jobs = useLoaderData()
+    const [jobs, setJob] = useState([])
+
+    useEffect(() => {
+        fetch('/Job-category.json')
+        .then(res => res.json())
+        .then(data => setJob(data))
+    },[])
 
     return (
         <div className=' mt-20'>

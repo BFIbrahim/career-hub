@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import SingleFeatureJob from '../SingleFeatureJob/SingleFeatureJob';
+import { useLoaderData } from 'react-router-dom';
 
 const FeaturedJobs = () => {
 
-    const [feturedJobs, setFeaturedJob] = useState([]);
+    // const [feturedJobs, setFeaturedJob] = useState([]);
 
-    useEffect(() => {
-        fetch('/FeaturedJob.json')
-            .then(res => res.json())
-            .then(data => setFeaturedJob(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch('/FeaturedJob.json')
+    //         .then(res => res.json())
+    //         .then(data => setFeaturedJob(data))
+    // }, [])
+
+    const feturedJobs = useLoaderData()
 
     return (
         <div>
