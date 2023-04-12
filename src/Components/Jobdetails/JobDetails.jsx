@@ -1,11 +1,11 @@
 import React from 'react';
 import './JobDetails.css'
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { CalendarDaysIcon, CurrencyDollarIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid'
 
 const JobDetails = () => {
 
-    const singleJobDetail = useLoaderData()
+     const singleJobDetail = useLoaderData()
 
     const { jobDescription, jobResponsibility, educationalRequirements, experiences, salary, jobTitle, contactInformation, location } = singleJobDetail
 
@@ -49,7 +49,7 @@ const JobDetails = () => {
                         <span>Location: {location}</span>
                     </p>
 
-                    <button className='apply-btn mt-10 w-5/5'>Apply Now</button>
+                    <Link to="/applied Jobs"><button className='apply-btn mt-10 w-5/5'>Apply Now</button></Link>
                 </div>
             </div>
 
@@ -59,3 +59,4 @@ const JobDetails = () => {
 };
 
 export default JobDetails;
+

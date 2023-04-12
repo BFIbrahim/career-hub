@@ -14,7 +14,7 @@ const Banner = () => {
                 </div>
 
                 <div>
-                    <img src="../../../public/Images/man.png" alt="" />
+                    <img src="man.png" alt="" />
                 </div>
             </div>
         </div>
